@@ -1,0 +1,6 @@
+-------------- DOCKER SCOUT --------------
+It's used to search for vulnerabilities before
+publishing it on the Docker Registry.
+
+It can be used both on the CLI and the Docker Desktop (on the
+Scout tab).

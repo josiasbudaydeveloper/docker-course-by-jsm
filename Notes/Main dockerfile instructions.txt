@@ -1,0 +1,22 @@
+Main dockerfile instructions:
+
+Sets the base image for the new image
+FROM node:20-alpine
+
+Run commands on the shell
+RUN addgroup app && adduser -S -G app app
+
+Sets the users to run the app
+USER app
+
+Sets the working directory on the container file system
+WORKDIR /app
+
+Copy files from the local fs to the container fs
+COPY . .
+
+Sets which port does the containers will be listenning at the runtime
+EXPOSE 3000
+
+Command to run the app
+CMD npm run dev/build

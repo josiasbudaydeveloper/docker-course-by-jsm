@@ -1,0 +1,47 @@
+---------- IMAGES ----------
+CREATING IMAGE:
+- Creating a dockerfile to specify the image receipt
+
+Downloading an image:
+$ docker pull <image name>
+
+Searching for an image:
+$ docker search <image name>
+
+Creating an image:
+$ docker build -t <image name> . (the directory to the dockerfile)
+
+Show all images:
+$ docker images
+
+Delete an image:
+$ docker rmi <image id>
+
+Publishing an image:
+$ docker login
+$ docker tag react-docker <username>/<image name>
+$ docker push <username>/<image name>
+
+---------- Containers (images instances) ----------
+Running an image:
+$ docker run <image name>
+
+Running a server image:
+$ docker run -p 3000:3000 <image name>
+
+Running a front-end server image with hot-reload:
+$ docker run -p 3000:3000 
+-v "$(pwd):/app" 
+-v /app/node_modules (if we want to make the container's node/modules directory intact)
+<image name>
+
+Showing all running containers:
+$ docker ps
+
+Showing all containers (even the stopped ones):
+$ docker ps -a
+
+Managing containers:
+Start:  $ docker start <container id>
+Stop:   $ docker stop <container id>
+Delete: $ docker rm <container id>

@@ -1,0 +1,28 @@
+-------------- DOCKER COMPOSE --------------
+Docker Compose is a resource that allows for creating and manipulating
+many related-containers once.
+
+It works by defining a compose.yaml file that contains instructions about
+how to build and set up all related-containers and volumes.
+
+ON THE SAME DIRECTORY AS THE compose.yaml FILE:
+We can build those images and run all them with:
+$ docker compose up
+
+We can start or pause them with:
+$ docker compose start/stop
+
+-------------- DOCKER COMPOSE WATCH --------------
+Docker Compose Watch is a feature that allows for watching files on those
+containers and them do something:
+- sync (similar to bind mounts)
+- rebuild (for example, every time package.json and/or package-lock.json changes
+
+To use Docker Compose Watch, we first have to start those containers.
+
+ON THE SAME DIRECTORY AS THE compose.yaml FILE:
+docker compose watch
+
+Then, if we make changes on those tracked files and directories, they will
+start synchronizations or rebuilds, based on what we have configured on
+compose.yaml file.
