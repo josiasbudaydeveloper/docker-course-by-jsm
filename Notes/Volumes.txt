@@ -3,15 +3,15 @@ Volumes are a way to manage the storage on the containers.
 
 There are three types of volumes on Docker
 - Named volumes (global volumes):
-	Defined on the compose.yalm file outside of services.
+	They can be defined on the compose.yalm file outside of services.
 	They can have any name and can be used by many different containers
 - Bind mounts:
 	They are used to mirror the host file system inside of the containers
 	one.
-	They are defined on the compose.yaml file inside of each container 
+	They can be defined on the compose.yaml file inside of each container 
 	(service) and follows the syntax: 
 		"$(pwd)":<container path> 
 - Anonymous volumes:
 	They are used to preserve data on a specific container file system.
-	They are not global and are defined following the syntax:
+	They are not global and are defined through following the syntax:
 		<container path>
